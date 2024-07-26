@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 // Route to download the APK file
 app.get('/download/apk', (req, res) => {
   const filePath = path.join(__dirname,'public', 'apk', 'indusapp.apk');
-  res.download(filePath, 'your_file.apk', (err) => {
+  res.download(filePath, 'indusapp.apk', (err) => {
       if (err) {
           console.error("Error downloading the file:", err);
           res.status(500).send('Could not download the file.');
